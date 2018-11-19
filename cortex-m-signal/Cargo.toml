@@ -1,0 +1,13 @@
+[package]
+name = "cortex-m-signal"
+version = "0.1.0"
+authors = ["Jorge Aparicio <jorge@japaric.io>"]
+edition = "2018"
+
+[lib]
+name = "signal"
+
+[dependencies]
+cortex-m-signal-macros = { path = "macros" }
+hash32 = "0.1.0"
+hash32-derive = "0.1.0"

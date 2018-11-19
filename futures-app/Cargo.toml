@@ -1,0 +1,23 @@
+[package]
+authors = ["Jorge Aparicio <jorge@japaric.io>"]
+edition = "2018"
+readme = "README.md"
+name = "app"
+version = "0.1.0"
+
+[dependencies]
+cortex-m = "0.5.8"
+cortex-m-rt = "0.6.5"
+cortex-m-semihosting = "0.3.2"
+cortex-m-signal = { path = "../cortex-m-signal" }
+futures-executor = { path = "../futures-executor" }
+pin-utils = "0.1.0-alpha.3"
+
+[dependencies.panic-semihosting]
+features = ["exit"]
+version = "0.5.1"
+
+[profile.release]
+codegen-units = 1 # better optimizations
+debug = true # symbols are nice and they don't increase the size on Flash
+lto = true # better optimizations

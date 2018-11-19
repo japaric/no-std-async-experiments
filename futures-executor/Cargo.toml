@@ -1,0 +1,16 @@
+[package]
+name = "futures-executor"
+version = "0.1.0"
+authors = ["Jorge Aparicio <jorge@japaric.io>"]
+edition = "2018"
+
+[lib]
+name = "executor"
+
+[dependencies]
+heapless = "0.4.0"
+cortex-m-signal = { path = "../cortex-m-signal" }
+
+[dependencies.cortex-m]
+features = ["inline-asm"]
+version = "0.5.8"

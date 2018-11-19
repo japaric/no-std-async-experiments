@@ -1,0 +1,11 @@
+[target.thumbv7m-none-eabi]
+# execute programs on QEMU
+runner = "qemu-system-arm -cpu cortex-m3 -machine lm3s6965evb -nographic -semihosting-config enable=on,target=native -kernel"
+
+rustflags = [
+  "-C", "link-arg=-Tlink.x",
+  "-C", "link-arg=-Tsignal.x",
+]
+
+[build]
+target = "thumbv7m-none-eabi" # Cortex-M3

@@ -1,0 +1,13 @@
+[package]
+name = "generator-executor"
+version = "0.1.0"
+authors = ["Jorge Aparicio <jorge@japaric.io>"]
+edition = "2018"
+
+[lib]
+name = "executor"
+
+[dependencies]
+heapless = "0.4.0"
+cortex-m-signal = { path = "../cortex-m-signal" }
+cortex-m = "0.5.8"

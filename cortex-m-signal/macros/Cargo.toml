@@ -1,0 +1,12 @@
+[package]
+name = "cortex-m-signal-macros"
+version = "0.1.0"
+authors = ["Jorge Aparicio <jorge@japaric.io>"]
+
+[lib]
+name = "signal_macros"
+proc-macro = true
+
+[dependencies]
+syn = "0.15.13"
+quote = "0.6.8"
